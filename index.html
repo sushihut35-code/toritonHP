@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="dark" lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ホーム | 鳥とん - 炭火焼きの極み</title>
+    <meta name="description" content="究極の炭火焼き、ここに極まる。伝統と炎が織りなす、厳選した炭とこだわりの肉が奏でる至高の極み。">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sizzle-overlay {
+            background: linear-gradient(0deg, rgba(19,19,19,1) 0%, rgba(19,19,19,0) 50%, rgba(19,19,19,0.8) 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 179, 177, 0.3);
+        }
+        .ember-animation {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 15;
+            filter: blur(1px);
+            box-shadow: 0 0 8px currentColor;
+        }
+        /* Enhanced Heat Haze Effect: More intense and energetic */
+        @keyframes heatHaze {
+            0%, 100% {
+                transform: scale(1.05) skew(0deg) translateY(0);
+                filter: blur(1px) brightness(1.1);
+            }
+            25% {
+                transform: scale(1.08) skew(2deg) translateY(-5px);
+                filter: blur(3px) brightness(1.2);
+            }
+            50% {
+                transform: scale(1.1) skew(-3deg) translateY(-2px);
+                filter: blur(2px) brightness(1.05);
+            }
+            75% {
+                transform: scale(1.07) skew(4deg) translateY(-8px);
+                filter: blur(4px) brightness(1.3);
+            }
+        }
+        .flame-distortion {
+            animation: heatHaze 4s ease-in-out infinite;
+            transform-origin: bottom center;
+            mix-blend-mode: overlay;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        .bg-zoom-slow {
+            animation: slowZoom 20s ease-in-out infinite alternate;
+        }
+        @keyframes slowZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#92001c",
+                        "on-secondary-container": "#fca967",
+                        "tertiary-fixed-dim": "#ffba3f",
+                        "on-secondary": "#4e2600",
+                        "surface-variant": "#353534",
+                        "outline-variant": "#5b403f",
+                        "tertiary-fixed": "#ffdeae",
+                        "secondary-fixed-dim": "#ffb780",
+                        "surface-container": "#201f1f",
+                        "surface": "#131313",
+                        "primary": "#ffb3b1",
+                        "on-background": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#ab8987",
+                        "on-surface": "#e5e2e1",
+                        "inverse-primary": "#bb152c",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-fixed": "#2f1400",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#e4bebc",
+                        "primary-container": "#ff535b",
+                        "on-primary": "#680011",
+                        "tertiary": "#ffba3f",
+                        "tertiary-container": "#c18500",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-container": "#3b2600",
+                        "on-tertiary-fixed": "#281800",
+                        "on-tertiary": "#432c00",
+                        "secondary": "#ffb780",
+                        "surface-tint": "#ffb3b1",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-container": "#763c00",
+                        "background": "#131313",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#410007",
+                        "primary-fixed": "#ffdad8",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#5b000e",
+                        "surface-bright": "#393939",
+                        "on-secondary-fixed-variant": "#6f3800",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed-variant": "#604100"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "section-gap": "80px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "unit": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    fontFamily: {
+                        "label-sm": ["Space Grotesk"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Libre Caslon Text"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Libre Caslon Text"]
+                    },
+                    fontSize: {
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-background/95 dark:bg-background/95 backdrop-blur-md border-b border-surface-variant">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+            <a href="index.html" class="font-headline-md text-headline-md text-on-surface tracking-tighter uppercase">鳥とん</a>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="index.html">ホーム</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="menu.html">お品書き</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="philosophy.html">こだわり</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="store.html">店舗情報</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="https://example.com/shop" target="_blank">オンラインショップ</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact.html">お問い合わせ</a>
+            </div>
+            <a href="https://example.com/order" target="_blank" class="bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-widest px-6 py-3 hover:brightness-110 active:scale-95 duration-150 ease-in-out transition-all block text-center">オンライン注文</a>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <img alt="炭火焼きの熱気" class="w-full h-full object-cover bg-zoom-slow" src="https://lh3.googleusercontent.com/aida/AP1WRLvC3XnfcCyNO0SGkuquUTUPwG-1sEVDal4H6zxxn2dWlvED3T_k302fSsErakaZxr3PR_sHJPEA-izLbF40iNeK_zKG8zze-GRP4Kvqzhp8xshMhvulhjnC-af7TxrJM0VghtMgoKqv4Kwm1QB0O7I_Xx9XhXXHq52SWJ-M0P1Qy-b2U7ESnccX1OwnYqBiI_Q4B4aH9aE1IaUkDt4AlkbuOqwwAU_J-WPJBkTQZ64LpZi1Fsoo5Tsw_g"/>
+                <!-- Enhanced Heat Distortion Overlay -->
+                <div class="absolute inset-0 sizzle-overlay"></div>
+                <div class="absolute inset-0 flame-distortion bg-gradient-to-t from-primary/30 via-secondary/10 to-transparent"></div>
+                <div class="absolute inset-0 flame-distortion bg-gradient-to-t from-transparent via-primary/5 to-transparent scale-125 translate-y-[-10%]" style="animation-duration: 3s; animation-delay: -1s; opacity: 0.4;"></div>
+            </div>
+
+            <!-- Embers Container -->
+            <div class="absolute inset-0 z-10 pointer-events-none" id="ember-container"></div>
+
+            <div class="relative z-20 text-center px-margin-mobile">
+                <h2 class="font-headline-lg text-on-surface mb-4 tracking-[0.3em] uppercase opacity-90 text-center w-full" style='font-family: "Shippori Mincho", serif; font-weight: 900; font-size: clamp(4rem, 10vw, 10rem); letter-spacing: 0.5em; filter: drop-shadow(rgba(255, 179, 177, 0.4) 0px 0px 20px); line-height: 1; margin-bottom: 2rem;'>鳥とん</h2>
+                <h1 class="font-headline-xl text-headline-xl mb-6 text-glow leading-tight transition-all duration-1000 ease-out tracking-tighter mt-2" id="hero-title" style='font-family: "Shippori Mincho", serif; font-weight: 900; font-size: clamp(2rem, 5vw, 5rem); letter-spacing: 0.05em; filter: drop-shadow(rgba(255, 179, 177, 0.5) 0px 0px 12px); line-height: 1.1;'>
+                    究極の炭火焼き、<br class="hidden md:block"/>ここに極まる。
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto tracking-wide">伝統と炎が織りなす、厳選した炭とこだわりの肉が奏でる至高の極み。</p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center">
+                    <a href="tel:0982-63-XXXX" class="px-10 py-5 bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-[0.2em] hover:brightness-125 transition-all text-center">テイクアウト☎（門川本店）</a>
+                    <a href="tel:0968-43-XXXX" class="px-10 py-5 bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-[0.2em] hover:brightness-125 transition-all text-center">テイクアウト☎（山鹿支店）</a>
+                    <a href="https://example.com/shop" target="_blank" class="px-10 py-5 border border-outline text-on-surface font-label-sm text-label-sm uppercase tracking-[0.2em] hover:bg-on-surface hover:text-surface transition-all text-center">オンライン販売</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concept Section -->
+        <section class="bg-surface-container-lowest py-section-gap">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-20 items-center">
+                <div class="space-y-12">
+                    <div class="space-y-4">
+                        <span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">私たちの信念</span>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface">黒の芸術</h2>
+                    </div>
+                    <div class="font-headline-md text-headline-md text-on-surface-variant leading-relaxed italic border-l-4 border-tertiary pl-8">「炭は単なる熱源ではない。それは肉に命を吹き込み、秘伝のスパイスを昇華させる魂である」</div>
+                    <div class="font-body-lg text-body-lg text-on-surface-variant space-y-6 max-w-lg">
+                        <p>厨房の深き静寂の中、厳選した炭の「黒」が、厳選された肉の根源的な生命力と出会います。鳥とんでは、選び抜かれた炭のみを使用し、秘伝のスパイスが素材の奥深い旨味を凝縮させる究極の温度を追求しています。</p>
+                        <p>一皿は、規律ある職人技の結晶です。それは焼き手と炎,そして素材との間で交わされる音なき対話なのです。</p>
+                    </div>
+                </div>
+                <div class="relative aspect-[3/4] group overflow-hidden">
+                    <img alt="宮崎流炭火焼き" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXZ3M_qfatZRCXzEft6s47-hPW2hO4XTav7dRFuwxUYjaZHIKdOu86FjYggZqlaoCVmTdhTlUu1YourOK1ASbw5rqgP3e9RyK5_z1i45B3EkJNl8up3jnUapmW44oD4sP6b2PZFq8kedl_idAtvetpEwQGJ6DnOFZeKB1E0T5AnJ9KIzW2mJJDnBtEKPzpV9riWQ4KhQhDISmzNq9tL8hZFaA08GxbWOHbqIVu1J0VK-z0758I-SmssPgfYXkSXMV1dZn59iMDCA"/>
+                    <div class="absolute inset-0 border-[24px] border-surface-container-lowest/20"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="py-section-gap bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid md:grid-cols-3 gap-16">
+                    <div class="md:col-span-1">
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">最新情報</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">季節のおすすめメニューや、鳥とんの特別な催しをご案内いたします。</p>
+                    </div>
+                    <div class="md:col-span-2 divide-y divide-surface-variant">
+                        <div class="py-8 group cursor-pointer flex justify-between items-center">
+                            <div class="space-y-2">
+                                <span class="font-label-sm text-label-sm text-tertiary">2024.05.12</span>
+                                <h4 class="font-body-lg text-body-lg text-on-surface group-hover:text-primary transition-colors">初夏のペアリング：厳選日本酒と鶏たたきのマリアージュ</h4>
+                            </div>
+                            <span class="material-symbols-outlined text-outline">chevron_right</span>
+                        </div>
+                        <div class="py-8 group cursor-pointer flex justify-between items-center">
+                            <div class="space-y-2">
+                                <span class="font-label-sm text-label-sm text-tertiary">2024.04.28</span>
+                                <h4 class="font-body-lg text-body-lg text-on-surface group-hover:text-primary transition-colors">オンラインショップ開店：ご自宅で愉しむ極上の炭火焼きセット</h4>
+                            </div>
+                            <span class="material-symbols-outlined text-outline">chevron_right</span>
+                        </div>
+                        <div class="py-8 group cursor-pointer flex justify-between items-center">
+                            <div class="space-y-2">
+                                <span class="font-label-sm text-label-sm text-tertiary">2024.04.15</span>
+                                <h4 class="font-body-lg text-body-lg text-on-surface group-hover:text-primary transition-colors">ゴールデンウィーク期間中の営業体制に関するお知らせ</h4>
+                            </div>
+                            <span class="material-symbols-outlined text-outline">chevron_right</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order CTA Section -->
+        <section class="relative py-section-gap overflow-hidden">
+            <div class="absolute inset-0 bg-primary opacity-5 mix-blend-overlay"></div>
+            <div class="max-w-4xl mx-auto px-margin-mobile text-center relative z-10">
+                <h2 class="font-headline-lg text-headline-lg mb-8">炭火の熱狂を、食卓へ。</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">伝統と炎が織りなす、厳選した炭とこだわりの素材が奏でる至高の極み。</p>
+                <a href="https://example.com/order" target="_blank" class="inline-block bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-[0.4em] px-16 py-8 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(255,83,91,0.2)]">オンライン注文</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-surface-variant">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-8 px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+            <div class="space-y-6">
+                <div class="font-headline-md text-headline-md text-on-surface uppercase tracking-widest">鳥とん</div>
+                <div class="font-body-md text-body-md text-on-surface-variant max-w-md space-y-4">
+                    <div>
+                        <p class="text-tertiary font-label-sm mb-1 uppercase tracking-widest">本店</p>
+                        <p>宮崎県東臼杵郡門川町南町3-21</p>
+                    </div>
+                    <div>
+                        <p class="text-tertiary font-label-sm mb-1 uppercase tracking-widest">支店</p>
+                        <p>山鹿店（FC店）</p>
+                    </div>
+                    <p class="mt-4 italic">一粒の炭に、揺るぎない矜持を込めて。</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">share</a>
+                    <a href="store.html" class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">location_on</a>
+                    <a href="tel:0982-63-XXXX" class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">call</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+                <div class="space-y-4">
+                    <h5 class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">探す</h5>
+                    <ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+                        <li><a class="hover:text-tertiary transition-colors" href="index.html">ホーム</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="menu.html">お品書き</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="philosophy.html">こだわり</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="store.html">店舗情報</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">つながる</h5>
+                    <ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+                        <li><a class="hover:text-tertiary transition-colors" href="#">インスタグラム</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="#">フェイスブック</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="#">ツイッター</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">規約</h5>
+                    <ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+                        <li><a class="hover:text-tertiary transition-colors" href="#">利用規約</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="#">プライバシーポリシー</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="#">特定商取引法に基づく表記</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-surface-variant/30 text-center md:text-left">
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-60">© 2024 鳥とん. 炭火の芸術、ここに極まる。</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hero entrance animation
+        window.addEventListener('DOMContentLoaded', () => {
+            const heroTitle = document.getElementById('hero-title');
+            if (heroTitle) {
+                heroTitle.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+
+        // Atmospheric Ember Particle System - Adjusted for an elegant, calm appearance
+        const emberContainer = document.getElementById('ember-container');
+
+        function createEmber() {
+            if (!emberContainer) return;
+            const ember = document.createElement('div');
+            ember.classList.add('ember-animation');
+
+            // Randomize starting position with concentration towards the center bottom
+            const randomX = Math.random();
+            const startX = (randomX * randomX * (Math.random() > 0.5 ? 1 : -1) * 0.4 + 0.5) * window.innerWidth;
+            const startY = window.innerHeight + 20;
+            const size = Math.random() * 4 + 1.0;
+            const duration = Math.random() * 2500 + 2000; // Slightly slower rise for elegance
+            const drift = (Math.random() - 0.5) * 400; // Moderate drift
+
+            ember.style.left = `${startX}px`;
+            ember.style.top = `${startY}px`;
+            ember.style.width = `${size}px`;
+            ember.style.height = `${size}px`;
+
+            // Refined glowing colors
+            const colors = ['#ff4d00', '#ff8400', '#ffcc00', '#ffb3b1', '#ffffff', '#ff1a1a'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            ember.style.backgroundColor = color;
+            ember.style.color = color;
+
+            emberContainer.appendChild(ember);
+
+            const animation = ember.animate([
+                {
+                    transform: 'translate(0, 0) scale(1) rotate(0deg)',
+                    opacity: 0
+                },
+                {
+                    opacity: 1,
+                    offset: 0.1
+                },
+                {
+                    transform: `translate(${drift * 0.8}px, -${window.innerHeight * 0.6}px) scale(1.5) rotate(180deg)`,
+                    opacity: 0.8,
+                    offset: 0.7
+                },
+                {
+                    transform: `translate(${drift}px, -${window.innerHeight * 1.1}px) scale(0.2) rotate(360deg)`,
+                    opacity: 0
+                }
+            ], {
+                duration: duration,
+                easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+            });
+
+            animation.onfinish = () => ember.remove();
+        }
+
+        // Reduced frequency for an elegant and calm atmosphere
+        setInterval(createEmber, 80);
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (!nav) return;
+            if (window.scrollY > 100) {
+                nav.classList.add('py-1');
+                nav.classList.remove('py-unit');
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.add('py-unit');
+                nav.classList.remove('py-1');
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>

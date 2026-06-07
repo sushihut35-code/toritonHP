@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="dark" lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>店舗情報 | 鳥とん - 炭火焼きの極み</title>
+    <meta name="description" content="鳥とんの店舗情報。門川本店、山鹿支店の住所、電話番号、営業時間をご案内いたします。">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#92001c",
+                        "on-secondary-container": "#fca967",
+                        "tertiary-fixed-dim": "#ffba3f",
+                        "on-secondary": "#4e2600",
+                        "surface-variant": "#353534",
+                        "outline-variant": "#5b403f",
+                        "tertiary-fixed": "#ffdeae",
+                        "secondary-fixed-dim": "#ffb780",
+                        "surface-container": "#201f1f",
+                        "surface": "#131313",
+                        "primary": "#ffb3b1",
+                        "on-background": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#ab8987",
+                        "on-surface": "#e5e2e1",
+                        "inverse-primary": "#bb152c",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-fixed": "#2f1400",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#e4bebc",
+                        "primary-container": "#ff535b",
+                        "on-primary": "#680011",
+                        "tertiary": "#ffba3f",
+                        "tertiary-container": "#c18500",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-container": "#3b2600",
+                        "on-tertiary-fixed": "#281800",
+                        "on-tertiary": "#432c00",
+                        "secondary": "#ffb780",
+                        "surface-tint": "#ffb3b1",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-container": "#763c00",
+                        "background": "#131313",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#410007",
+                        "primary-fixed": "#ffdad8",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#5b000e",
+                        "surface-bright": "#393939",
+                        "on-secondary-fixed-variant": "#6f3800",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed-variant": "#604100"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "section-gap": "80px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "unit": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    fontFamily: {
+                        "label-sm": ["Space Grotesk", "sans-serif"],
+                        "headline-md": ["Libre Caslon Text", "serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-xl": ["Libre Caslon Text", "serif"],
+                        "headline-lg-mobile": ["Libre Caslon Text", "serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Libre Caslon Text", "serif"]
+                    },
+                    fontSize: {
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sizzle-mask {
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(255, 83, 91, 0.4);
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-background/95 dark:bg-background/95 backdrop-blur-md border-b border-surface-variant">
+        <div class="flex justify-between items-center px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+            <a href="index.html" class="font-headline-md text-headline-md text-on-surface tracking-tighter uppercase">鳥とん</a>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">ホーム</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="menu.html">お品書き</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="philosophy.html">こだわり</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="store.html">店舗情報</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="https://example.com/shop" target="_blank">オンラインショップ</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact.html">お問い合わせ</a>
+                <a href="https://example.com/order" target="_blank" class="bg-primary-container text-on-primary-container font-label-sm px-6 py-2 uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all inline-block">今すぐ注文</a>
+            </div>
+            <button class="md:hidden text-on-surface">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] w-full flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="厳選した炭が燃える伝統的な焼き鳥店のカウンター" class="w-full h-full object-cover grayscale brightness-[0.3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMgdonm8fVJAB8213xEkWT-kltta8tbtlwruKA4a6d2zZjgExfy2zWZ_azrMbeIUPnCRJfbcwaXHJlNW7qHkZRui4s1pDuwSyb3VegIDTys6ooIk5TAMd4oG-U-XDo7UpoNQLGJeO6vEgtcuNp31JKdeq-krGQ__mqXLSq0lRhMYvHhs_LI8Ia5QyPqXr4OBBzylG7pu0eRJahCqu1yHUZ9yRlsMrP-CwczgXRzO7qK0nyMnmUqklILSBmoxX1_DyCsIxN4jGHCQ">
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50"></div>
+            </div>
+            <div class="relative z-10 text-center px-margin-mobile">
+                <span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.4em] mb-4 block">こだわりと空間</span>
+                <h1 class="font-headline-xl text-headline-xl mb-6 max-w-4xl mx-auto">聖なる炉端</h1>
+                <div class="w-12 h-[1px] bg-primary mx-auto mb-8"></div>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto opacity-80">伝統の技とミニマリズムが融合する場所。厳選した炭で焼き上げる地鶏の、力強くも繊細な温もりをご体感ください。</p>
+            </div>
+        </section>
+
+        <!-- Store Details & Map -->
+        <section class="bg-surface-container py-section-gap">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <div class="lg:w-1/3">
+                        <h2 class="font-headline-lg text-headline-lg mb-8">店舗詳細</h2>
+                        <ul class="space-y-8">
+                            <li class="flex gap-6">
+                                <span class="material-symbols-outlined text-primary mt-1">location_on</span>
+                                <div>
+                                    <h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-1">本店 所在地</h4>
+                                    <p class="font-body-lg">〒889-0616 宮崎県東臼杵郡<br>門川町南町3-21</p>
+                                    <button class="mt-4 bg-primary-container text-on-primary-container font-label-sm px-6 py-2 uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all block">地図を開く</button>
+                                </div>
+                            </li>
+                            <li class="flex gap-6">
+                                <span class="material-symbols-outlined text-primary mt-1">call</span>
+                                <div>
+                                    <h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-1">お電話</h4>
+                                    <p class="font-body-lg">0982-63-XXXX</p>
+                                    <p class="font-body-md text-on-surface-variant mt-2">テイクアウト承っております</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-6">
+                                <span class="material-symbols-outlined text-primary mt-1">schedule</span>
+                                <div>
+                                    <h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-1">営業時間</h4>
+                                    <p class="font-body-lg">17:00 〜 22:00</p>
+                                    <p class="font-body-md text-on-surface-variant mt-2">※食材売り切れ次第閉店</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-6">
+                                <span class="material-symbols-outlined text-primary mt-1">event_busy</span>
+                                <div>
+                                    <h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-1">定休日</h4>
+                                    <p class="font-body-lg">火曜日・第3月曜日</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="relative h-[500px] bg-surface-variant overflow-hidden">
+                            <!-- Google Maps Embed Placeholder -->
+                            <div class="absolute inset-0 flex items-center justify-center bg-surface-variant text-on-surface-variant">
+                                <div class="text-center">
+                                    <span class="material-symbols-outlined text-6xl mb-4">map</span>
+                                    <p class="font-body-lg">Google Maps埋め込みエリア</p>
+                                    <p class="font-body-md text-on-surface-variant mt-2">門川本店の位置情報を表示</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Yamaga Branch Section -->
+        <section class="bg-surface-container-lowest py-section-gap">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                <div class="flex flex-col lg:flex-row-reverse gap-12">
+                    <div class="lg:w-1/3">
+                        <h2 class="font-headline-lg text-headline-lg mb-8">山鹿支店</h2>
+                        <ul class="space-y-8">
+                            <li class="flex gap-6">
+                                <span class="material-symbols-outlined text-tertiary mt-1">location_on</span>
+                                <div>
+                                    <h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-1">所在地</h4>
+                                    <p class="font-body-lg">熊本県山鹿市<br>（詳細住所はお問い合わせください）</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-6">
+                                <span class="material-symbols-outlined text-tertiary mt-1">call</span>
+                                <div>
+                                    <h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-1">お電話</h4>
+                                    <p class="font-body-lg">0968-43-XXXX</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-6">
+                                <span class="material-symbols-outlined text-tertiary mt-1">info</span>
+                                <div>
+                                    <h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-1">店舗種別</h4>
+                                    <p class="font-body-lg">FC店（フランチャイズ）</p>
+                                    <p class="font-body-md text-on-surface-variant mt-2">メニュー・営業時間が異なる場合がございます</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div class="relative h-[400px] bg-surface-variant overflow-hidden">
+                            <div class="absolute inset-0 flex items-center justify-center bg-surface-variant text-on-surface-variant">
+                                <div class="text-center">
+                                    <span class="material-symbols-outlined text-6xl mb-4">storefront</span>
+                                    <p class="font-body-lg">山鹿支店</p>
+                                    <p class="font-body-md text-on-surface-variant mt-2">FC店舗として営業中</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access Directions -->
+        <section class="bg-surface-container py-section-gap">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                <div class="text-center mb-12">
+                    <h2 class="font-headline-lg text-headline-lg mb-4">アクセス方法</h2>
+                    <p class="font-body-lg text-on-surface-variant">門川本店へのアクセス方法をご案内いたします</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 border border-surface-variant hover:border-primary/40 transition-colors group">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-4">directions_car</span>
+                        <h3 class="font-headline-md text-headline-md mb-4">お車でお越しの場合</h3>
+                        <p class="text-on-surface-variant font-body-md">東九州自動車道「門川IC」より約5分。店舗専用駐車場が10台分ございます。</p>
+                    </div>
+                    <div class="p-8 border border-surface-variant hover:border-primary/40 transition-colors group">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-4">train</span>
+                        <h3 class="font-headline-md text-headline-md mb-4">電車でお越しの場合</h3>
+                        <p class="text-on-surface-variant font-body-md">JR日豊本線「門川駅」よりタクシーで約10分、またはお電話にて送迎可能（要予約）</p>
+                    </div>
+                    <div class="p-8 border border-surface-variant hover:border-primary/40 transition-colors group">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-4">directions_walk</span>
+                        <h3 class="font-headline-md text-headline-md mb-4">徒歩でお越しの場合</h3>
+                        <p class="text-on-surface-variant font-body-md">門川駅南口より国道10号線を南下。約1.5km、徒歩約20分です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-surface-variant">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-8 px-margin-desktop py-section-gap max-w-container-max mx-auto">
+            <div class="space-y-6">
+                <div class="font-headline-md text-headline-md text-on-surface uppercase tracking-widest">鳥とん</div>
+                <div class="font-body-md text-body-md text-on-surface-variant max-w-md space-y-4">
+                    <div>
+                        <p class="text-tertiary font-label-sm mb-1 uppercase tracking-widest">本店</p>
+                        <p>宮崎県東臼杵郡門川町南町3-21</p>
+                    </div>
+                    <div>
+                        <p class="text-tertiary font-label-sm mb-1 uppercase tracking-widest">支店</p>
+                        <p>山鹿店（FC店）</p>
+                    </div>
+                    <p class="mt-4 italic">一粒の炭に、揺るぎない矜持を込めて。</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">share</a>
+                    <a href="tel:0982-63-XXXX" class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">call</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+                <div class="space-y-4">
+                    <h5 class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">探す</h5>
+                    <ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+                        <li><a class="hover:text-tertiary transition-colors" href="index.html">ホーム</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="menu.html">お品書き</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="philosophy.html">こだわり</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="store.html">店舗情報</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">つながる</h5>
+                    <ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+                        <li><a class="hover:text-tertiary transition-colors" href="#">インスタグラム</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="#">フェイスブック</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="#">ツイッター</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">規約</h5>
+                    <ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+                        <li><a class="hover:text-tertiary transition-colors" href="#">利用規約</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="#">プライバシーポリシー</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="#">特定商取引法に基づく表記</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-surface-variant/30 text-center md:text-left">
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-60">© 2024 鳥とん. 炭火の芸術、ここに極まる。</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="dark" lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>こだわり | 鳥とん - 炭火焼きの極み</title>
+    <meta name="description" content="鳥とんのこだわり。厳選した炭、地鶏、秘伝のスパイスについてご紹介いたします。">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 179, 177, 0.3);
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container": "#201f1f",
+                        "secondary-fixed-dim": "#ffb780",
+                        "inverse-on-surface": "#313030",
+                        "surface-dim": "#131313",
+                        "secondary-fixed": "#ffdcc4",
+                        "surface": "#131313",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "on-background": "#e5e2e1",
+                        "primary": "#ffb3b1",
+                        "inverse-primary": "#bb152c",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#ab8987",
+                        "tertiary-fixed-dim": "#ffba3f",
+                        "on-secondary-container": "#fca967",
+                        "on-primary-fixed-variant": "#92001c",
+                        "surface-variant": "#353534",
+                        "on-secondary": "#4e2600",
+                        "tertiary-fixed": "#ffdeae",
+                        "outline-variant": "#5b403f",
+                        "surface-tint": "#ffb3b1",
+                        "secondary": "#ffb780",
+                        "on-tertiary": "#432c00",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed": "#281800",
+                        "on-tertiary-container": "#3b2600",
+                        "surface-container-low": "#1c1b1b",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#ffdad8",
+                        "on-primary-fixed": "#410007",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#763c00",
+                        "background": "#131313",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "surface-bright": "#393939",
+                        "on-secondary-fixed-variant": "#6f3800",
+                        "on-primary-container": "#5b000e",
+                        "on-secondary-fixed": "#2f1400",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-container": "#ff535b",
+                        "on-surface-variant": "#e4bebc",
+                        "on-error": "#690005",
+                        "on-primary": "#680011",
+                        "tertiary-container": "#c18500",
+                        "tertiary": "#ffba3f"
+                    },
+                    spacing: {
+                        "section-gap": "80px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "unit": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    fontSize: {
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background">
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-background/95 dark:bg-background/95 backdrop-blur-md border-b border-surface-variant">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+            <a href="index.html" class="font-headline-md text-headline-md text-on-surface tracking-tighter uppercase">鳥とん</a>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">ホーム</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="menu.html">お品書き</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="philosophy.html">こだわり</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="store.html">店舗情報</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="https://example.com/shop" target="_blank">オンラインショップ</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact.html">お問い合わせ</a>
+            </div>
+            <a href="https://example.com/order" target="_blank" class="bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-widest px-6 py-3 hover:brightness-110 active:scale-95 duration-150 ease-in-out transition-all block text-center">オンライン注文</a>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="炭火焼きの熱気" class="w-full h-full object-cover grayscale brightness-[0.4]" src="https://lh3.googleusercontent.com/aida/AP1WRLvC3XnfcCyNO0SGkuquUTUPwG-1sEVDal4H6zxxn2dWlvED3T_k302fSsErakaZxr3PR_sHJPEA-izLbF40iNeK_zKG8zze-GRP4Kvqzhp8xshMhvulhjnC-af7TxrJM0VghtMgoKqv4Kwm1QB0O7I_Xx9XhXXHq52SWJ-M0P1Qy-b2U7ESnccX1OwnYqBiI_Q4B4aH9aE1IaUkDt4AlkbuOqwwAU_J-WPJBkTQZ64LpZi1Fsoo5Tsw_g">
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/70"></div>
+            </div>
+            <div class="relative z-10 text-center px-margin-mobile">
+                <span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.4em] mb-4 block">Our Philosophy</span>
+                <h1 class="font-headline-xl text-headline-xl mb-6 text-glow">こだわり</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">炭、肉、スパイス。全てに矜持を込めて。</p>
+            </div>
+        </section>
+
+        <!-- Philosophy Section 1: Charcoal -->
+        <section class="py-section-gap bg-surface-container-lowest">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">01</span>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface mt-4 mb-8">炭の選定</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
+                            厳選した備長炭のみを使用。高温で均一に熱を伝え、食材に力強い香りを移します。炭の種類、大きさ、配置まで、全てが味わいを左右する重要な要素です。
+                        </p>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            私たちは紀州、土佐など全国各地から最高級の炭を取り寄せ、その日の湿度、風、そして食材に合わせて最適な組み合わせを選び出します。
+                        </p>
+                    </div>
+                    <div class="relative aspect-square">
+                        <div class="absolute inset-0 bg-surface-variant opacity-20"></div>
+                        <img alt="厳選された炭" class="relative w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMgdonm8fVJAB8213xEkWT-kltta8tbtlwruKA4a6d2zZjgExfy2zWZ_azrMbeIUPnCRJfbcwaXHJlNW7qHkZRui4s1pDuwSyb3VegIDTys6ooIk5TAMd4oG-U-XDo7UpoNQLGJeO6vEgtcuNp31JKdeq-krGQ__mqXLSq0lRhMYvHhs_LI8Ia5QyPqXr4OBBzylG7pu0eRJahCqu1yHUZ9yRlsMrP-CwczgXRzO7qK0nyMnmUqklILSBmoxX1_DyCsIxN4jGHCQ">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section 2: Chicken -->
+        <section class="py-section-gap bg-surface-container">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 md:order-1 relative aspect-square">
+                        <div class="absolute inset-0 bg-surface-variant opacity-20"></div>
+                        <img alt="宮崎県産地鶏" class="relative w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLs6Z7ggjx___GiPxALmxIAh2kCSDHyGXNUO38qGa_g7zlQQMpei22q1NgLiHI3BVLCl9tkv40Al0DbWXJlIYOZNKREYYX6YH06ATC8e8Yxl_XbXFWay7QPv7ZIcTzjWWCM3j9Q211Z5hm5kYFZp6dmKRWFQHmRIXZA5r6Uvibh8CeKUxkNr0jGQ1rvf3WHEJa-shbrkTZaEHwk6Kn9GYFwqPZKorZW2eA2ZU3-qDsiIBPp_sHhyNGIhgg">
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">02</span>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface mt-4 mb-8">地鶏へのこだわり</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
+                            宮崎県産地鶏を中心に、三郷未来豚など九州各地から厳選した食材を使用。鶏は美味しい餌を与え、適度に運動させた地鶏だけを使用しています。
+                        </p>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            肉質、脂の乗り、そして何より鶏本来の旨味。自然豊かな環境で育てられた鶏こそが、炭火焼きに最適です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section 3: Spices -->
+        <section class="py-section-gap bg-surface-container-lowest">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">03</span>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface mt-4 mb-8">秘伝のスパイス</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
+                            創業以来脈々と受け継がれる秘伝のスパイスブレンド。唐辛子、胡椒、そして数種類の香辛料を絶妙なバランスで配合しています。
+                        </p>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            スパイスは肉の味を引き立てるためのもの。主張しすぎず、でも確かな存在感。炭火の熱と食材が織りなす味わいを完成へと導く、最後のピースです。
+                        </p>
+                    </div>
+                    <div class="relative aspect-square">
+                        <div class="absolute inset-0 bg-surface-variant opacity-20"></div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-surface-variant text-on-surface-variant">
+                            <div class="text-center">
+                                <span class="material-symbols-outlined text-6xl mb-4">local_fire_department</span>
+                                <p class="font-body-lg">秘伝のスパイス</p>
+                                <p class="font-body-md mt-2">創業以来の伝承</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="relative py-section-gap bg-surface-container overflow-hidden">
+            <div class="max-w-4xl mx-auto px-margin-mobile text-center relative z-10">
+                <span class="material-symbols-outlined text-8xl text-primary opacity-30">format_quote</span>
+                <blockquote class="font-headline-xl text-headline-xl text-on-surface my-8 leading-tight">
+                    「炭は単なる熱源ではない。<br/>それは肉に命を吹き込み、<br/>秘伝のスパイスを昇華させる魂である」
+                </blockquote>
+                <p class="font-body-lg text-body-lg text-tertiary">— 鳥とん 創業者</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-surface-variant">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-8 px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+            <div class="space-y-6">
+                <div class="font-headline-md text-headline-md text-on-surface uppercase tracking-widest">鳥とん</div>
+                <div class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                    <p class="italic">一粒の炭に、揺るぎない矜持を込めて。</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="tel:0982-63-XXXX" class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">call</a>
+                    <a href="store.html" class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">location_on</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+                <div class="space-y-4">
+                    <h5 class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">探す</h5>
+                    <ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+                        <li><a class="hover:text-tertiary transition-colors" href="index.html">ホーム</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="menu.html">お品書き</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="philosophy.html">こだわり</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="store.html">店舗情報</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">つながる</h5>
+                    <ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+                        <li><a class="hover:text-tertiary transition-colors" href="#">インスタグラム</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="#">フェイスブック</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="#">ツイッター</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">規約</h5>
+                    <ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+                        <li><a class="hover:text-tertiary transition-colors" href="#">利用規約</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="#">プライバシーポリシー</a></li>
+                        <li><a class="hover:text-tertiary transition-colors" href="#">特定商取引法に基づく表記</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-surface-variant/30 text-center md:text-left">
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-60">© 2024 鳥とん. 炭火の芸術、ここに極まる。</p>
+        </div>
+    </footer>
+</body>
+</html>

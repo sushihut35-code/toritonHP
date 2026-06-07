@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="dark" lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>お品書き | 鳥とん - 炭火焼きの極み</title>
+    <meta name="description" content="門川本店のお品書き。炭火焼き鶏、豚肉、一品料理をご紹介いたします。">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .font-headline-xl { font-family: 'Libre Caslon Text', 'Noto Sans JP', serif; }
+        .font-headline-lg { font-family: 'Libre Caslon Text', 'Noto Sans JP', serif; }
+        .font-headline-md { font-family: 'Libre Caslon Text', 'Noto Sans JP', serif; }
+        .font-label-sm { font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif; }
+
+        .sizzle-glow {
+            box-shadow: 0 0 20px rgba(230, 57, 70, 0.2);
+        }
+
+        .gold-accent {
+            color: #ffba3f;
+        }
+
+        .ma-spacing {
+            letter-spacing: 0.15em;
+        }
+
+        .gradient-overlay {
+            background: linear-gradient(0deg, rgba(14,14,14,1) 0%, rgba(14,14,14,0.4) 50%, rgba(14,14,14,0) 100%);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container": "#201f1f",
+                        "secondary-fixed-dim": "#ffb780",
+                        "inverse-on-surface": "#313030",
+                        "surface-dim": "#131313",
+                        "secondary-fixed": "#ffdcc4",
+                        "surface": "#131313",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "on-background": "#e5e2e1",
+                        "primary": "#ffb3b1",
+                        "inverse-primary": "#bb152c",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#ab8987",
+                        "tertiary-fixed-dim": "#ffba3f",
+                        "on-secondary-container": "#fca967",
+                        "on-primary-fixed-variant": "#92001c",
+                        "surface-variant": "#353534",
+                        "on-secondary": "#4e2600",
+                        "tertiary-fixed": "#ffdeae",
+                        "outline-variant": "#5b403f",
+                        "surface-tint": "#ffb3b1",
+                        "secondary": "#ffb780",
+                        "on-tertiary": "#432c00",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed": "#281800",
+                        "on-tertiary-container": "#3b2600",
+                        "surface-container-low": "#1c1b1b",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#ffdad8",
+                        "on-primary-fixed": "#410007",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#763c00",
+                        "background": "#131313",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "surface-bright": "#393939",
+                        "on-secondary-fixed-variant": "#6f3800",
+                        "on-primary-container": "#5b000e",
+                        "on-secondary-fixed": "#2f1400",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-container": "#ff535b",
+                        "on-surface-variant": "#e4bebc",
+                        "on-error": "#690005",
+                        "on-primary": "#680011",
+                        "tertiary-container": "#c18500",
+                        "tertiary": "#ffba3f"
+                    },
+                    spacing: {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "container-max": "1200px",
+                        "section-gap": "80px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px"
+                    },
+                    fontSize: {
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-xl": ["60px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-background/95 dark:bg-background/95 backdrop-blur-md border-b border-surface-variant">
+        <div class="flex justify-between items-center px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+            <a href="index.html" class="font-headline-md text-headline-md text-on-surface tracking-tighter uppercase">鳥とん</a>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">ホーム</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="menu.html">お品書き</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="philosophy.html">こだわり</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="store.html">店舗情報</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="https://example.com/shop" target="_blank">オンラインショップ</a>
+                <a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact.html">お問い合わせ</a>
+            </div>
+            <a href="https://example.com/order" target="_blank" class="bg-primary-container text-on-primary-container px-6 py-2 font-label-sm uppercase tracking-widest active:scale-95 duration-150 ease-in-out transition-all sizzle-glow block">今すぐ注文</a>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] flex flex-col items-center justify-center text-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center opacity-50" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLs6Z7ggjx___GiPxALmxIAh2kCSDHyGXNUO38qGa_g7zlQQMpei22q1NgLiHI3BVLCl9tkv40Al0DbWXJlIYOZNKREYYX6YH06ATC8e8Yxl_XbXFWay7QPv7ZIcTzjWWCM3j9Q211Z5hm5kYFZp6dmKRWFQHmRIXZA5r6Uvibh8CeKUxkNr0jGQ1rvf3WHEJa-shbrkTZaEHwk6Kn9GYFwqPZKorZW2eA2ZU3-qDsiIBPp_sHhyNGIhgg')"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background"></div>
+            </div>
+            <div class="relative z-10 px-margin-mobile">
+                <span class="font-label-sm text-label-sm text-tertiary tracking-[0.3em] uppercase mb-4 block">Our Culinary Selection</span>
+                <h1 class="font-headline-xl text-headline-xl mb-8 leading-tight">お品書き - 門川本店</h1>
+                <div class="flex gap-4 justify-center border-t border-b border-surface-variant py-6">
+                    <a class="font-label-sm text-label-sm text-primary flex items-center gap-2 group transition-all" href="#">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                        門川本店メニュー
+                    </a>
+                    <div class="w-px h-4 bg-surface-variant self-center"></div>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-2 group" href="#">
+                        <span class="material-symbols-outlined">storefront</span>
+                        山鹿支店メニュー
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section: Charcoal Grill -->
+        <section class="max-w-container-max mx-auto px-margin-desktop py-section-gap">
+            <div class="flex items-baseline gap-4 mb-12">
+                <h2 class="font-headline-lg text-headline-lg">炭火焼き</h2>
+                <span class="font-label-sm text-label-sm text-tertiary-fixed-dim">CHARCOAL GRILL</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Item 1: Chicken -->
+                <div class="group relative overflow-hidden bg-surface-container-low transition-all duration-500 hover:bg-surface-container border-l-2 border-primary-container/20 hover:border-primary-container">
+                    <div class="aspect-[16/9] overflow-hidden">
+                        <img alt="Miyazaki Jidori" class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLs6Z7ggjx___GiPxALmxIAh2kCSDHyGXNUO38qGa_g7zlQQMpei22q1NgLiHI3BVLCl9tkv40Al0DbWXJlIYOZNKREYYX6YH06ATC8e8Yxl_XbXFWay7QPv7ZIcTzjWWCM3j9Q211Z5hm5kYFZp6dmKRWFQHmRIXZA5r6Uvibh8CeKUxkNr0jGQ1rvf3WHEJa-shbrkTZaEHwk6Kn9GYFwqPZKorZW2eA2ZU3-qDsiIBPp_sHhyNGIhgg">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-headline-md text-headline-md">鶏もも炭火焼き</h3>
+                            <span class="font-headline-md text-tertiary">1,400<span class="text-body-md ml-1">円</span></span>
+                        </div>
+                        <p class="text-on-surface-variant font-body-md leading-relaxed mb-6">
+                            宮崎県産地鶏を使用し、最高級備長炭で一気に焼き上げました。力強い炭の香りと、噛むほどに溢れる地鶏本来の旨味をご堪能ください。
+                        </p>
+                        <div class="flex gap-3">
+                            <span class="px-3 py-1 border border-outline-variant text-label-sm font-label-sm uppercase">Chef's Choice</span>
+                            <span class="px-3 py-1 border border-outline-variant text-label-sm font-label-sm uppercase">Signature</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Pork -->
+                <div class="group relative overflow-hidden bg-surface-container-low transition-all duration-500 hover:bg-surface-container border-l-2 border-secondary-container/20 hover:border-secondary-container">
+                    <div class="aspect-[16/9] overflow-hidden">
+                        <img alt="Premium Pork" class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLtLsBeinuDJNGjsqd1om7BbLKgpUH_12b_n-yY68Nl_svC_cMlwpiy_qhlQVP4ZzDpKF097gwKKh4T4-rejbA1XuAYDmn9trkJpPtIp8c9nowiwmOmYursQpU-5C3-Qh8w7kZXeWLe_uMKsXICrO0GQYtQgQGoW8esHAxUizMwqA41VJhGT6-sh45pT-Bj831z3mZRKHIZJDVD8LjtRhfelHIVwT1k4HMqZSJSvUv3bLCYWU8pX7eMQ">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-headline-md text-headline-md">豚もも炭火焼き</h3>
+                            <span class="font-headline-md text-tertiary">1,500<span class="text-body-md ml-1">円</span></span>
+                        </div>
+                        <p class="text-on-surface-variant font-body-md leading-relaxed mb-6">
+                            三郷未来豚の厳選された部位のみを使用。柔らかな肉質と、炭火で炙り出された甘みのある脂のコントラストをお楽しみいただけます。
+                        </p>
+                        <div class="flex gap-3">
+                            <span class="px-3 py-1 border border-outline-variant text-label-sm font-label-sm uppercase">Premium Pork</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sizzle Reel Break -->
+        <section class="w-full overflow-hidden relative group">
+            <div class="flex h-64 md:h-80 items-center justify-center bg-surface-container-lowest">
+                <div class="absolute inset-0 opacity-40">
+                    <img alt="Atmospheric Background" class="w-full h-full object-cover blur-sm" data-alt="A macro cinematic shot of glowing charcoal embers and faint smoke rising in a dark Japanese kitchen. The lighting is low and warm, highlighting the rough textures of the burnt wood and the shimmering heat waves. The overall mood is focused, traditional, and intense, reflecting the mastery of charcoal grilling craft." src="https://lh3.googleusercontent.com/aida/AP1WRLs6Z7ggjx___GiPxALmxIAh2kCSDHyGXNUO38qGa_g7zlQQMpei22q1NgLiHI3BVLCl9tkv40Al0DbWXJlIYOZNKREYYX6YH06ATC8e8Yxl_XbXFWay7QPv7ZIcTzjWWCM3j9Q211Z5hm5kYFZp6dmKRWFQHmRIXZA5r6Uvibh8CeKUxkNr0jGQ1rvf3WHEJa-shbrkTZaEHwk6Kn9GYFwqPZKorZW2eA2ZU3-qDsiIBPp_sHhyNGIhgg">
+                </div>
+                <div class="relative z-10 text-center px-margin-mobile">
+                    <h4 class="font-headline-lg text-headline-lg italic opacity-80 mb-2">The Art of Sizzle</h4>
+                    <p class="font-label-sm text-label-sm tracking-[0.4em] uppercase text-tertiary">Experience the fire</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section: A la carte -->
+        <section class="max-w-container-max mx-auto px-margin-desktop py-section-gap">
+            <div class="flex items-baseline gap-4 mb-12">
+                <h2 class="font-headline-lg text-headline-lg">一品料理</h2>
+                <span class="font-label-sm text-label-sm text-tertiary-fixed-dim">A LA CARTE</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Chicken Tataki -->
+                <div class="p-8 border border-surface-variant hover:border-primary/40 transition-colors group">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="font-headline-md text-headline-md">鶏のたたき</h3>
+                        <span class="text-tertiary font-headline-md">1,500<span class="text-label-sm ml-1">円</span></span>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md mb-8">新鮮な地鶏をさっと炙り、旨味を閉じ込めました。特製ポン酢でさっぱりと。</p>
+                    <div class="h-[1px] bg-surface-variant w-full"></div>
+                </div>
+
+                <!-- Fried Chicken Wings -->
+                <div class="p-8 border border-surface-variant hover:border-primary/40 transition-colors group md:col-span-2 bg-surface-container-low">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                        <h3 class="font-headline-md text-headline-md">手羽先唐揚げ</h3>
+                        <div class="flex gap-4 font-label-sm text-label-sm">
+                            <div class="text-center"><span class="block text-tertiary text-lg">850円</span>500g</div>
+                            <div class="text-center border-l border-outline-variant pl-4"><span class="block text-tertiary text-lg">1,700円</span>1kg</div>
+                            <div class="text-center border-l border-outline-variant pl-4"><span class="block text-tertiary text-lg">2,550円</span>1.5kg</div>
+                        </div>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md">外はカリッと、中はジューシー。秘伝のスパイスが効いた、お酒の進む逸品です。ボリュームに合わせてお選びいただけます。</p>
+                </div>
+
+                <!-- Fries -->
+                <div class="p-6 border border-surface-variant hover:border-tertiary/40 transition-colors">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-body-lg font-bold">フライドポテト</h3>
+                        <span class="text-tertiary">300円</span>
+                    </div>
+                </div>
+
+                <!-- Cheese -->
+                <div class="p-6 border border-surface-variant hover:border-tertiary/40 transition-colors">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-body-lg font-bold">カリカリチーズ</h3>
+                        <span class="text-tertiary">400円</span>
+                    </div>
+                </div>
+
+                <!-- Fish Fry -->
+                <div class="p-6 border border-surface-variant hover:border-tertiary/40 transition-colors group relative overflow-hidden">
+                    <div class="flex justify-between items-center mb-2 relative z-10">
+                        <h3 class="font-body-lg font-bold">魚フライ</h3>
+                        <span class="text-tertiary">500円</span>
+                    </div>
+                    <div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-10 transition-opacity">
+                        <img alt="Fish Fry" class="w-full h-full object-cover" data-alt="A professional high-contrast studio photograph of golden-brown deep-fried fish fillets served on a dark slate plate. The crust is visibly crispy and textured, with light glistening off the crunch. The background is a deep charcoal black, creating a high-end minimalist atmosphere typical of modern Japanese gourmet dining." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUxKOPK6zvjd2PFaisnZ-EXTI-PgnKYCXn2NWYn0nhD-zhmmdBdvh0chOqAsG3ZsGLpEKRbAi1czhmtkOO6YveVYnxaOUomOH5ODHeyrevMfOi8rvRgqNVZEdWnmPauNY75ug8zY-o2nZjgbjWJ3wdFcWgfI58k4DicGOYp-IqOCFKWpEnuvUpZ8K4ZGgXzZ-sjAzjyczSJt0svg0ESB7czZ6rtMYNkg2x_Xk_MAvJJ1xfsEfgV6CVPGn2P6umqbulutfS_jGuTQ">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-surface-variant">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-12 px-margin-desktop py-section-gap max-w-container-max mx-auto">
+            <div class="max-w-sm">
+                <h2 class="font-headline-md text-headline-md text-on-surface mb-6 uppercase tracking-tighter">鳥とん</h2>
+                <div class="space-y-4 text-on-surface-variant font-body-md">
+                    <p class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-tertiary">location_on</span>
+                        <span class="">門川本店<br>〒889-0616 宮崎県東臼杵郡門川町南町3-21</span>
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-tertiary">call</span>
+                        <span class="">0982-63-XXXX</span>
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-16">
+                <div>
+                    <h4 class="font-label-sm text-label-sm text-on-surface uppercase mb-6 tracking-widest">Navigation</h4>
+                    <ul class="space-y-4 font-body-md text-on-surface-variant">
+                        <li class=""><a class="hover:text-tertiary transition-colors" href="index.html">ホーム</a></li>
+                        <li class=""><a class="text-primary font-bold" href="menu.html">お品書き</a></li>
+                        <li class=""><a class="hover:text-tertiary transition-colors" href="store.html">店舗情報</a></li>
+                        <li class=""><a class="hover:text-tertiary transition-colors" href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-sm text-label-sm text-on-surface uppercase mb-6 tracking-widest">Social</h4>
+                    <ul class="space-y-4 font-body-md text-on-surface-variant">
+                        <li class=""><a class="hover:text-tertiary transition-colors" href="#">Instagram</a></li>
+                        <li class=""><a class="hover:text-tertiary transition-colors" href="#">Facebook</a></li>
+                        <li class=""><a class="hover:text-tertiary transition-colors" href="#">Twitter</a></li>
+                        <li class=""><a class="hover:text-tertiary transition-colors" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-surface-variant/30 text-center md:text-left">
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-60">© 2024 鳥とん. 炭火の芸術、ここに極まる。</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-unit');
+            } else {
+                nav.classList.add('py-unit');
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
